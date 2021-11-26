@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        R&D Demo
+    </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</head>
+div class = "container">
+            <div class = "jumbotron">
+                <h1>
+                    Automatic Emoji Recommendation System 
+                </h1>
+                <p>
+                    This system automatically suggests a set of emojis based on the sentiment of the user input
+                </p>
+            </div>
+            <form method = "POST">
+                <!-- <div class = "form-group"> -->
+                    <!-- {% if forms.errors %} -->
+                    <!-- {% endif %} -->
+                    {{ form.as_p }}
+                    <!-- csrf token is generated automatically by django and is important for users info integrity -->
+                    {% csrf_token %}
+                <!-- </div> -->
+                <button type = "submit" class = "btn btn-success">Submit</button>
+            </form>
+
+            <h2>
+                <label>
+                    LaBSE score : {{ labse }}
+                </label><br>
+                <label>
+                    Distilled PML score : {{ pml }}
+                </label>
+            </h2>
+        </div>
+    </body>
+
+</html>
